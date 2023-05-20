@@ -147,8 +147,8 @@ select {
   font-size: 30px;
 }
 /* texto */
-
-.quadrados-superior {
+.texto-quadrados,
+.texto-quadrados-2bloco {
   font-size: 14px;
   text-align: center;
   margin: 10px 20px 0 10px;
@@ -165,25 +165,29 @@ select {
 
 /* graficos */
 .tela-grafico {
-  /* display: block; */
-  border: 2px solid blue;
   width: 50%;
   vertical-align: top;
-  /* padding: 30px; */
+
   background: #ffffff;
   margin-right: 20px;
 }
 
 .tela-graficos1 {
-  border: 2px solid blue;
-  /* padding: 20px; */
   margin: 0 0 20px 0;
-  /* display: block; */
 }
+.tela-graficos2 {
+  background: #d6dee4;
 
+  height: 20px;
+}
 .texto-grafico {
   line-height: 1.5;
 }
+.tela-quadrado-grafico {
+  display: inline-flex;
+  margin: 10px;
+}
+
 .tela-rodape {
   background: #ffffff;
   margin-top: 20px;
