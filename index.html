@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="src/style/reset.css" />
+    <link rel="stylesheet" href="src/style/style.css" />
 
     <!--importando as  fontes do google -->
     <link
@@ -21,7 +21,10 @@
     <title>Dashboard</title>
   </head>
   <body>
+ 
     <header></header>
+   
+   
     <main>
       <section class="dashboard">
         <!-- menu -->
@@ -52,12 +55,18 @@
         <div class="tela-dashboard">
           <h2>KPI Dashnoard</h2>
           <select id="job">
-            <option>Institution</option>
+            <option>Empresa x</option>
+          
           </select>
+         
           <select id="job">
-            <option>2017-2018</option>
-            <option>2018-2019</option>
+            <!-- selecione o genero -->
+            <!-- male Mascoline -->
+            <option>Male</option>
+            <option>Feminine</option>
+          
           </select>
+         
         </div>
         <!-- quadrados -->
         <section class="tela">
@@ -65,7 +74,7 @@
             <i class="bi bi-book"></i>
 
             <div class="po">
-              <p class="texto-quadrados">Current Students</p>
+              <p class="texto-quadrados">Quantidade de clientes por gênero</p>
               <p class="numero">2,119</p>
             </div>
           </div>
@@ -74,14 +83,14 @@
             <i class="bi bi-list-ul"></i>
 
             <div class="po">
-              <p class="texto-quadrados">Students Enrolied</p>
+              <p class="texto-quadrados">Quantidade de clientes por idade</p>
               <p class="numero">3,119</p>
             </div>
           </div>
           <div class="tela-quadrado">
             <i class="bi bi-mortarboard-fill"></i>
             <div class="po">
-              <p class="texto-quadrados">Cumulative Graduates</p>
+              <p class="texto-quadrados">Quantidade de clientes por países</p>
               <p class="numero">3,119</p>
             </div>
           </div>
@@ -89,25 +98,27 @@
             <i class="bi bi-trophy"></i>
 
             <div class="po">
-              <p class="texto-quadrados">Cumulative Students Enrolied</p>
+              <p class="texto-quadrados">Quantidade de mulheres com mais de 18 anos</p>
               <p class="numero">25,600</p>
             </div>
           </div>
-          <div class="tela-quadrado">
-            <i class="bi bi-layout-text-window-reverse"></i>
+          <!-- <div class="tela-quadrado">
+            <i class="bi bi-layout-text-window-reverse"></i> -->
 
-            <div class="po">
+            <!-- <div class="po">
               <p class="texto-quadrados">Accreditations</p>
               <p class="numero">12</p>
-            </div>
+            </div> -->
           </div>
         </section>
 
         <section class="tela">
           <section class="tela-grafico">
             <h2>Value Analysis</h2>
-
-            <div></div>
+<!-- cliente por idade  -->
+            <div id="chart" class="grafico" ></div>
+            
+            
             <p class="texto-grafico">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Accusantium modi rem maiores cupiditate dolore doloribus quisquam
@@ -116,64 +127,82 @@
           </section>
           <section class="tela-grafico">
             <section class="tela-graficos1">
-              <h2>Attendance</h2>
+              <h2>Gênero</h2>
 
               <div class="tela-quadrado-grafico">
-                <div class="po">
-                  <p class="texto-quadrados-2bloco">Attendance</p>
-                </div>
+                <div id="generoFamele"></div>
+         <p class="texto-quadrados-2bloco">Feminino</p>
+                             
               </div>
               <div class="tela-quadrado-grafico">
-                <div class="po">
-                  <p class="texto-quadrados-2bloco">Excessive Absence</p>
+               
+                <div id="generoMale"></div>
+                  <p class="texto-quadrados-2bloco">Masculino</p>
                 </div>
-              </div>
-
+   
               <div class="tela-quadrado-grafico">
-                <p class="texto-quadrados-2bloco">Attrition</p>
+                <div id="generoFamele18"></div>
+                <p class="texto-quadrados-2bloco">Feminino +18</p>
               </div>
             </section>
 
        
             <div class="tela-graficos2">
             </div>
-       
-              <section class="tela-graficos1">
-                <h2>Custommer Satisfaction</h2>
+        <section class="tela-graficos1">
+           <h2>Quantidade Clientes </h2>
 
-                <div class="tela-quadrado-grafico">
-                  <div class="po">
-                    <p class="numero">54%</p>
-                    <p class="texto-quadrados-2bloco">Graduete Satisfection</p>
+    <div class="tela-quadrado-grafico">
+       <div>
+        <div id="chartPais" ></div>
+        <p class="texto-quadrados-2bloco">Pais</p>
+       
+       </div>         
+                 
+    <div>
+      <div id="chartIdade"></div>
+      <p class="texto-quadrados-2bloco">Idade</p>
+       
+    </div>            
+                <!-- <div class="tela-quadrado-grafico"> -->
                   </div>
-                </div>
-                <div class="tela-quadrado-grafico">
-                  <div class="po">
-                    <p class="numero">54%</p>
-                    <p class="texto-quadrados-2bloco">Graduete Satisfection</p>
-                  </div>
-                </div>
+                <!-- </div> -->
               </section>
             </section>
           </section>
 
           <!-- quadrados do 3 bloco-->
           <section class="tela-rodape">
-            <h2>Efficiency</h2>
+            <h2>Lista</h2>
 
             <div class="tela-quadrado-rodape">
               <div class="po">
-                <p class="texto-quadrados">Success Rate</p>
-                <p class="numero">88%</p>
+
+                <p class="texto-quadrados">Lista de países que possuem mais possíveis clientes</p>
+                <li>Belgica </li>
+                <li>Australia</li>
+                <li>EUA</li>
+                <li>Brasil</li>
+            
+                
               </div>
             </div>
             <div class="tela-quadrado-rodape">
               <div class="po">
-                <p class="texto-quadrados">Graduation Numbers</p>
-                <p class="numero">3,119</p>
+               
+               
+               
+                <p class="texto-quadrados">Lista de Nomes de mulheres com mais de 18 anos</p>
+              <li>Amanda</li>
+              <li>Paula</li>
+              <li>Sonia</li>
+              <li>Clara</li>
+               
+               
+               
               </div>
             </div>
-            <div class="tela-quadrado-rodape">
+            <!-- <div class="tela-quadrado-rodape">
               <div class="po">
                 <p class="texto-quadrados">Capacity Utilizatiion</p>
                 <p class="numero">85%</p>
@@ -185,11 +214,21 @@
                 <p class="texto-quadrados">Completion</p>
                 <p class="numero">91%</p>
               </div>
-            </div>
+            </div> -->
           </section>
         </section>
       </section>
     </main>
-    <footer></footer>
+       <!-- importando api com jquery -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       <!-- importando  api grafico  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+
+       <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+      <!-- Arquivo javaScript  -->
+      <script src="src/js/scripts.js"></script>
   </body>
 </html>
