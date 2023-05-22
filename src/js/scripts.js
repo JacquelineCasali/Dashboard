@@ -1,11 +1,33 @@
-// api dos dados
+//  api dos dados
+let cliente;
 $.ajax({
   url: "https://randomuser.me/api/?results=500",
   dataType: "json",
+  type: "GET",
   success: function (data) {
+    cliente = data;
     console.log(data);
   },
 });
+
+// faz requisição fetch
+
+function mostraGenero(dados) {
+  const bodyEL = document.body;
+  bodyEL.innerHTML = `<h1>${dados.gender}</h1>`;
+}
+
+fetch("https://randomuser.me/api/?results=500")
+  // resposta
+  // convertendo em json
+  .then((resposta) => resposta.json())
+
+  .then((resposta) => mostraGenero(resposta.gender))
+
+  // error
+  .catch((err) => {
+    console.log(err);
+  });
 
 // grafico de area
 var options = {
@@ -23,6 +45,12 @@ var options = {
     height: 350,
     type: "area",
   },
+  apexchartstoolbar: {
+    show: false,
+  },
+  toolbar: {
+    show: false,
+  },
   dataLabels: {
     enabled: false,
   },
@@ -30,23 +58,10 @@ var options = {
     curve: "smooth",
   },
   xaxis: {
-    type: "datetime",
-    categories: [
-      "2018-09-19T00:00:00.000Z",
-      "2018-09-19T01:30:00.000Z",
-      "2018-09-19T02:30:00.000Z",
-      "2018-09-19T03:30:00.000Z",
-      "2018-09-19T04:30:00.000Z",
-      "2018-09-19T05:30:00.000Z",
-      "2018-09-19T06:30:00.000Z",
-    ],
-  },
-  tooltip: {
-    x: {
-      format: "dd/MM/yy HH:mm",
-    },
+    type: "",
   },
 };
+// grafico barra
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
@@ -54,16 +69,16 @@ chart.render();
 var options = {
   series: [
     {
-      data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
+      data: [18, 30, 25],
     },
   ],
   chart: {
     type: "bar",
-    height: 350,
+    height: 150,
   },
   plotOptions: {
     bar: {
-      borderRadius: 4,
+      borderRadius: 2,
       horizontal: true,
     },
   },
@@ -71,18 +86,7 @@ var options = {
     enabled: false,
   },
   xaxis: {
-    categories: [
-      "South Korea",
-      "Canada",
-      "United Kingdom",
-      "Netherlands",
-      "Italy",
-      "France",
-      "Japan",
-      "United States",
-      "China",
-      "Germany",
-    ],
+    categories: ["South Korea", "Canada", "United Kingdom"],
   },
 };
 
@@ -92,16 +96,16 @@ chart.render();
 var options = {
   series: [
     {
-      data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
+      data: [18, 30],
     },
   ],
   chart: {
     type: "bar",
-    height: 350,
+    height: 150,
   },
   plotOptions: {
     bar: {
-      borderRadius: 4,
+      borderRadius: 2,
       horizontal: true,
     },
   },
@@ -109,11 +113,55 @@ var options = {
     enabled: false,
   },
   xaxis: {
-    categories: [">18", "<18"],
+    categories: ["Feminino", "Masculino"],
   },
 };
 
-var chart = new ApexCharts(document.querySelector("#chartPais"), options);
-chart.render();
 var idade = new ApexCharts(document.querySelector("#chartIdade"), options);
 idade.render();
+
+// grafico disco
+var options = {
+  series: [44, 20],
+  chart: {
+    width: 280,
+    type: "donut",
+  },
+  plotOptions: {
+    pie: {
+      startAngle: -90,
+      endAngle: 270,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  fill: {
+    type: "gradient",
+  },
+  legend: {
+    formatter: function (val, opts) {
+      return val + " - " + opts.w.globals.series[opts.seriesIndex];
+    },
+  },
+
+  responsive: [
+    {
+      breakpoint: 480,
+      options: {
+        chart: {
+          width: 100,
+        },
+        legend: {
+          position: "bottom",
+        },
+      },
+    },
+  ],
+};
+
+var chart = new ApexCharts(document.querySelector("#disc"), options);
+chart.render();
+
+var chart = new ApexCharts(document.querySelector("#disc2"), options);
+chart.render();

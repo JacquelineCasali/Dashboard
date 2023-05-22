@@ -130,7 +130,7 @@ select {
   /* border: 2px solid green; */
   display: inline-flex;
   margin-top: 20px;
-  width: 100%;
+  /* width: 100%; */
 }
 .tela-quadrado {
   border: 2px solid #d6dee4;
@@ -155,12 +155,16 @@ select {
   font-size: 30px;
 }
 /* texto */
-.texto-quadrados,
-.texto-quadrados-2bloco {
+.texto-quadrados {
   font-size: 14px;
   text-align: center;
   margin: 10px 20px 0 10px;
   color: black;
+  font-weight: bold;
+}
+/* legenda grafico */
+figcaption {
+  text-align: center;
   font-weight: bold;
 }
 /* numero do texto no  quadrado */
@@ -175,7 +179,6 @@ select {
 .tela-grafico {
   width: 50%;
   vertical-align: top;
-
   background: #ffffff;
   margin-right: 20px;
 }
@@ -188,16 +191,12 @@ select {
 
   height: 20px;
 }
-/* .graficoBarra {
-  display: inline-flex;
-  /* width: 50%; */
 
 .texto-grafico {
   line-height: 1.5;
 }
 .tela-quadrado-grafico {
   display: inline-flex;
-  /* margin: 10px; */
 }
 
 .tela-rodape {
@@ -208,25 +207,12 @@ select {
 .tela-quadrado-rodape {
   border: 2px solid #d6dee4;
   display: inline-flex;
-  margin: 10px 0 30px 30px;
-  /* padding: 10px 20px; */
+  margin: 0 0 15px 40px;
+
   background: #d6dee4;
-  width: 20%;
-  /* width: 30%; */
-  height: 80px;
+  width: 40%;
 }
 
-/* grafico value */
-
-/* .apexcharts-yaxis-texts-g {
-  font-size: 0px;
-} */
-/* tspan {
-  font-size: 0;
-} */
-/* .apexcharts-legend-series {
-  font-size: 0;
-} */
 /* resposividade  */
 
 @media screen and (max-width: 940px) {
@@ -286,9 +272,7 @@ select {
     font-size: 40px;
     margin: 10px 10px 0 10px;
   }
-  /* .po {
-    margin-left: 10px;
-  } */
+
   /* texto */
   .texto-quadrados,
   .texto-quadrados-2bloco {
@@ -297,6 +281,9 @@ select {
 
   .tela-grafico {
     width: 100%;
+  }
+  .tela-quadrado-grafico {
+    display: block;
   }
   .tela-quadrado-rodape {
     width: 70%;
