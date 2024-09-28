@@ -1,6 +1,7 @@
 import React from 'react'
 import "./ChartBox.css"
 import { Link } from "react-router-dom";
+import logo from "../../../assets/logo.svg"
 import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 // import {chartBoxUser} from "../../data"
 type Props = {
@@ -18,7 +19,7 @@ export default function ChartBox(props:Props) {
     <div className='chartBox'>
  <div className='boxInfo'>
     <div className="title">
-    <img src={props.icon} alt="" />
+    <img src={logo} alt="" />
     <span>{props.title}</span>
     </div>
     <h1>{props.number}</h1>

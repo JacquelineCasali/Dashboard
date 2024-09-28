@@ -23,16 +23,16 @@ Seleciona o botão code vai na opção Download ZIP
 
 ## Rodar o Projeto no FrontEnd 
 
-$ cd frontEnd
-$ npm install
-$ npm run dev
+-  cd frontEnd
+-  npm install
+-  npm run dev
 
 
 ## 🛠 Tecnologias utilizadas
 
 - **[Rect]**
 - **[Vite]**
--  **[Recharts]**
+- **[Recharts]**
 
 
 ## 📝 Licença
