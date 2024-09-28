@@ -1,0 +1,65 @@
+
+:root {
+  --mainbg:#2a3447;
+  --softbg:#384256;
+  --darkbg:#222b3c;
+  --maincolor:white;
+  --sorftcolor:#ddd;
+  --darkcolor:#2a3447;
+  }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+
+  }
+  
+
+  
+  /* formatacao da barra de rolagem */
+  body::-webkit-scrollbar {
+    width: 12px;                /* largura da barra de rolagem */
+    background-color: gainsboro;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #222;           /* cor de fundo da barra de rolagem */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: gainsboro;  /* cor do scroll (thumb) da barra de rolagem */
+    border-radius: 20px;        /* arredondar o scroll (thumb) */
+    border: 2px solid #b71c1c;     /* criar um espaco em volta do scroll */
+  }
+  h1{
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  a {
+    text-decoration: none;
+    color: inherit
+  }
+  .main{
+    font-family: "Inter",sans-serif;
+      background-color:var(--mainbg);
+      color: var(--maincolor);
+  }
+  .contairner{
+    display: flex;
+  }
+.menuContaner{
+  width: 250px;
+  padding: 5px 20px;
+  border-right:2px solid var(--softbg) ;
+
+}
+.contentContainer{
+  padding: 5px 20px;
+  width: 100%;
+}
+
+ 
