@@ -1,5 +1,5 @@
 import React from "react";
-import "./DataTable.css";
+import "./Table.css";
 import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
@@ -11,7 +11,7 @@ type Props={
   slug:string
 }
 
-export default function DataTable(props:Props) {
+export default function Table(props:Props) {
 
 const handelete=(id:number)=>{
 
@@ -29,9 +29,7 @@ const actionColumn:GridColDef={
         <Link to={`/${props.slug}/${params.row.id}`}>
         <FaRegEdit  size={25} color="green"/>
         </Link>
-{/* <div className="delete" onClick={()=>handelete(params.row.id)}>
-<FaRegEdit  size={5} color="green"/>
-</div> */}
+
 
 <RiDeleteBinLine size={25} color="red" className="delete"
 onClick={()=>handelete(params.row.id)}

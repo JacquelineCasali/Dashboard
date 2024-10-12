@@ -3,12 +3,14 @@ import NavBar from "../../components/NavBar/NavBar";
 import Menu from "../../components/Menu/Menu";
 import Footer from "../../components/Footer/Footer"
 import "./Users.css"
-import DataTable from "../../components/dataTable/DataTable";
+
 import { IoIosAdd } from "react-icons/io";
 
 import { GridColDef } from "@mui/x-data-grid";
 import React from "react";
 import { userRows } from "../../db/data";
+import Table from "../../components/Table/Table";
+
 
 const columns:GridColDef[] = [
   { field: "id", headerName: "ID", width: 50 },
@@ -92,9 +94,11 @@ export default function Users() {
  <IoIosAdd size={25}/>
   Novo Usuário</button>
 
-<DataTable 
+{/* <DataTable 
 slug="users"
-columns={columns} rows={userRows} />
+columns={columns} rows={userRows} /> */}
+<Table 
+slug="users" columns={columns} rows={userRows}/>
 </div>
 
 </div>
