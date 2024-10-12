@@ -16,7 +16,7 @@ Criar um Inteface interativa
 
 
 ## Repositorio do Projeto para clonar
-git clone git  git remote add origin https://github.com/JacquelineCasali/Dashboard.git
+git clone https://github.com/JacquelineCasali/Dashboard.git
 
 
 Seleciona o botão code vai na opção Download ZIP

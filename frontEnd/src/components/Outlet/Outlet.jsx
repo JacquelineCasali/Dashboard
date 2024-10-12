@@ -2,7 +2,7 @@ import React from 'react'
 import "./Outler.css"
 import TopBox from '../TopBox/TopBox'
 import ChartBox from '../ChartBox/ChartBox'
-import { barChartBoxRevenue, barChartBoxVisit, chartBoxConversion, chartBoxProduct, chartBoxRevenue, chartBoxUser } from '../../data'
+import { barChartBoxRevenue, barChartBoxVisit, chartBoxConversion, chartBoxProduct, chartBoxRevenue, chartBoxUser } from '../../db/data'
 import BarChartBox from '../BarChartBox/BarChartBox'
 import PierChartBox from '../PierChartBox/PierChartBox'
 import BigChartBox from '../BigChartBox/BigChartBox'

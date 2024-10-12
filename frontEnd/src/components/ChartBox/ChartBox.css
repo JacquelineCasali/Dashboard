@@ -1,6 +1,7 @@
 .chartBox{
     display: flex;
     height: 100%;
+ 
 }
 
 .boxInfo{
@@ -20,6 +21,7 @@ flex: 2;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+align-items: center;
 
 }
 .chartss{
@@ -40,3 +42,42 @@ font-size: 20px;
 font-size: 14px;
 color: var(--sorftcolor);
 }
+
+
+
+@media (min-width: 480px) {
+    .chartBox{
+        flex-direction: column;
+     
+    }
+    .boxInfo{
+     gap:20px
+    }
+  }
+  
+  @media (min-width: 768px) {
+
+  }
+
+  @media screen and (min-width:1024px) {
+
+     
+     
+  } 
+   @media screen and (min-width:1200px) {
+
+     
+     
+  } 
+  
+  @media screen and (min-width:1400px) {
+  
+h1{
+    font-size: 20px;
+}
+.percentage{
+    font-size: 16px;
+}
+      
+    }
+  

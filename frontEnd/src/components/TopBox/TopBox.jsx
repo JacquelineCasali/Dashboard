@@ -1,6 +1,6 @@
 import React from 'react'
 import "./TopBox.css"
-import { topDealUsers } from '../../data'
+import { topDealUsers } from '../../db/data'
 export default function TopBox() {
   return (
     <div className='topBox'>

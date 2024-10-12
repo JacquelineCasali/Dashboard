@@ -1,0 +1,30 @@
+.dataTable{
+  width: 100%;
+}
+
+.dataGrid{
+   background: var(--maincolor); 
+padding: 20px;
+}
+    .MuiDataGrid-toolbarContainer{
+    flex-direction: row-reverse;
+  }
+
+ 
+  .imgAvatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .delete{
+    margin-left: 15px;
+    cursor: pointer;
+
+  }
+
+  /* @media screen and (max-width: 768px) {
+   .dataTable{
+      width: 90%;
+   }
+ } */

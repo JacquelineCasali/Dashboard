@@ -3,7 +3,7 @@ import "./NavBar.css"
 import logo from "/assets/logo.svg"
 import perfil from "/assets/perfil.jpg"
 
-import { IoIosNotificationsOutline, IoIosSearch,IoMdExpand  } from "react-icons/io";
+import { IoIosNotificationsOutline, IoIosSearch  } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 
 import { AiOutlineAppstore , AiOutlineExpand } from "react-icons/ai";
