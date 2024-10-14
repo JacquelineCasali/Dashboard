@@ -1,18 +1,18 @@
 import { Helmet, HelmetProvider } from "react-helmet-async"; // titulo da pagina
 import NavBar from "../../components/NavBar/NavBar";
 import Menu from "../../components/Menu/Menu";
-import Footer from "../../components/Footer/Footer"
-import "./Users.css"
-
+import Footer from "../../components/Footer/Footer";
+import "./Users.css";
 import { IoIosAdd } from "react-icons/io";
-
 import { GridColDef } from "@mui/x-data-grid";
-import React from "react";
+import React, { useState } from "react";
 import { userRows } from "../../db/data";
 import Table from "../../components/Table/Table";
+import Modal from "../../components/Modal/Modal";
+import Cadastro from "../../components/Cadastro/Cadastro";
+// import Cadastro from "../../components/Cadastro/Cadastro";
 
-
-const columns:GridColDef[] = [
+const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 50 },
   //adicionando nova coluna
   {
@@ -22,24 +22,25 @@ const columns:GridColDef[] = [
     renderCell: (params) => {
       return (
         <img
-        className="avatar"
-        src={params.row.img || "../../../assets/noavatar.png"} alt="" />
+          className="avatar"
+          src={params.row.img || "../../../public/noavatar.png"}
+          alt=""
+        />
       );
     },
   },
- 
+
   {
     field: "firstName",
-    type:"string",
+    type: "string",
     headerName: "First name",
     width: 130,
-
   },
   {
     field: "lastName",
     headerName: "Last name",
     width: 130,
-    type:"string",
+    type: "string",
   },
   {
     field: "email",
@@ -64,49 +65,46 @@ const columns:GridColDef[] = [
     headerName: "Verified",
     width: 90,
     type: "boolean",
-   
   },
-
 ];
 
-export default function Users() {
- 
-  return (
-  
+const Users = () => {
+  //modal
+  const [openModal, setOpenModal] = useState(false);
 
-   <>
-     <HelmetProvider>
+  return (
+    <>
+      <HelmetProvider>
         <Helmet title="Usuários" />
       </HelmetProvider>
- 
-<div className="main">
-<NavBar/>
+      <div className="main">
+        <NavBar />
+        <div className="contairner">
+          <div className="menuContaner">
+            <Menu />
+          </div>
+          <div className="contentContainer">
+            <h1 className="info">Users</h1>
 
+            <button
+              className="buttonadicionar"
+              onClick={() => setOpenModal(true)}
+            >
+              <IoIosAdd size={25} />
+              Novo Usuário
+            </button>
+            <Modal isOpen={openModal} setOpenModal={setOpenModal}>
+              <Cadastro slug="users" columns={columns} setOpenModal={setOpenModal}/>
+            </Modal>
 
-<div className="contairner">
-<div className="menuContaner">
-  <Menu/>
-</div>
+            <Table slug="users" columns={columns} rows={userRows} />
 
- <div className="contentContainer">
- <h1 className="info">Users</h1>
- <button className="buttonadicionar">
- <IoIosAdd size={25}/>
-  Novo Usuário</button>
-
-{/* <DataTable 
-slug="users"
-columns={columns} rows={userRows} /> */}
-<Table 
-slug="users" columns={columns} rows={userRows}/>
-</div>
-
-</div>
-<Footer/>
-</div> 
-   </>
-   
-    
-
-  )
-}
+       
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
+};
+export default Users;

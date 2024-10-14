@@ -5,15 +5,15 @@ import {
   LuClipboardList,
   LuFileText,
   LuFileEdit,
-  LuServer,
+
   LuStretchHorizontal,
 } from "react-icons/lu";
 import {
   IoBarChartOutline,
   IoCartOutline,
-  IoDocumentTextOutline,
+
   IoNewspaperOutline,
-  IoReaderOutline,
+
   IoSettingsOutline,
 } from "react-icons/io5";
 import { AiOutlineAppstore } from "react-icons/ai";
@@ -190,7 +190,7 @@ export const topDealUsers = [
 
 export const chartBoxUser = {
   color: "#8884d8",
-  icon: "../../../assets/userIcon.svg",
+  icon: "../../../public/userIcon.svg",
   title: "Total Users",
   number: "11.238",
   dataKey: "users",
@@ -208,7 +208,7 @@ export const chartBoxUser = {
 
 export const chartBoxProduct = {
   color: "skyblue",
-  icon: "/assets/productIcon.svg",
+  icon: "/public/productIcon.svg",
   title: "Total Products",
   number: "238",
   dataKey: "products",
@@ -225,7 +225,7 @@ export const chartBoxProduct = {
 };
 export const chartBoxRevenue = {
   color: "teal",
-  icon: "/assets/revenueIcon.svg",
+  icon: "/public/revenueIcon.svg",
   title: "Total Revenue",
   number: "$56.432",
   dataKey: "revenue",
@@ -242,7 +242,7 @@ export const chartBoxRevenue = {
 };
 export const chartBoxConversion = {
   color: "gold",
-  icon: "/assets/conversionIcon.svg",
+  icon: "/public/conversionIcon.svg",
   title: "Total Ratio",
   number: "2.6",
   dataKey: "ratio",
@@ -329,6 +329,16 @@ export const barChartBoxVisit = {
     },
   ],
 };
+
+// cadastro
+export function cadastro(body){
+  // verificando se existe
+  const user=userRows.find(({email})=>email===body.email)
+  if(user) throw new Error("Usuario Já Cadastrado")
+    userRows.push(body)
+    return body
+}
+
 
 export const userRows = [
   {
@@ -738,3 +748,5 @@ export const singleProduct = {
     },
   ],
 };
+
+

@@ -16,13 +16,17 @@ type Props = {
 
 export default function ChartBox(props:Props) {
   return (
-    <div className='chartBox'>
- <div className='boxInfo'>
-    <div className="title">
+    <div className='box-9'>
+
+<div className="title">
     <img src={props.icon} alt="" />
     <span>{props.title}</span>
     </div>
-    <h1>{props.number}</h1>
+    <div className='chartBox'>
+
+ <div className='boxInfo'>
+
+    <h1 className='number'>{props.number}</h1>
     
 <Link to={"/"} style={{color:props.color}}>
 View all
@@ -56,6 +60,7 @@ View all
             <span className='duration'>this month</span>
     </div>
  </div>
+    </div>
     </div>
   )
 }

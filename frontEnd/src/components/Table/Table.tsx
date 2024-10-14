@@ -4,7 +4,8 @@ import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
+import { userRows } from "../../db/data";
 type Props={
   columns:GridColDef[]
   rows:object[]
@@ -14,7 +15,6 @@ type Props={
 export default function Table(props:Props) {
 
 const handelete=(id:number)=>{
-
  console.log("Id:" + id + " " + "foi deletado com sucesso!");
   
 }
@@ -48,7 +48,7 @@ onClick={()=>handelete(params.row.id)}
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 10,
+              pageSize: 5,
             },
           },
         }}

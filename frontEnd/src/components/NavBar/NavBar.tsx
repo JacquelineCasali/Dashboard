@@ -1,7 +1,5 @@
 import React from 'react'
 import "./NavBar.css"
-import logo from "/assets/logo.svg"
-import perfil from "/assets/perfil.jpg"
 
 import { IoIosNotificationsOutline, IoIosSearch  } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -12,7 +10,7 @@ export default function NavBar() {
     <div className='navbar' >
 
 <div className='logo'>
-    <img src={logo} alt="" />
+    <img src={"logo.svg"} alt="" />
     <span>lamadmin</span>
 </div>
 <div className='icons'>
@@ -27,7 +25,7 @@ size={30} />
 <span className='quantidade'>1</span>
 </div>
 <div className='user'>
-<img src={perfil} alt="" />    
+<img src={"perfil.jpg"} alt="" />    
 {/* <FaUserCircle size={30}/> */}
 <span>Lucas</span>
 

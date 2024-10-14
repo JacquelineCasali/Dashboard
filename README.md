@@ -1,15 +1,22 @@
 ## Projeto desenvolvido com 
 Esse é um projeto Dashboard 
-Esse projeto é o desenvolvimento de um Front-End  com React e utilizando a biblioteca de grafico Recharts 
+Esse projeto é o desenvolvimento de um Front-End  com React e utilizando a biblioteca de grafico Recharts e biblioteca Mui 
 
 
 ## Site do Projeto 
-https://burgers-restaurant-react.vercel.app/
+https://dashboard-five-delta-83.vercel.app/
 
 
 ## Imagem do Projeto
 <!-- ![cardapio](/cardapio.gif) -->
-<img src="./frontEnd/assets/2024-09-28_113234.png"/>
+<img src="./frontEnd/public/2024-09-28_113234.png"/>
+
+<!-- usuarios -->
+<img src="./frontEnd/public/usuarios.png"/>
+
+
+
+<img src="./frontEnd/public/Tela-de-cadastro.png"/>
 
 ## Objetivos
 Criar um Inteface interativa 
@@ -33,6 +40,7 @@ Seleciona o botão code vai na opção Download ZIP
 - **[Rect]**
 - **[Vite]**
 - **[Recharts]**
+- **[Mui]**
 
 
 ## 📝 Licença
