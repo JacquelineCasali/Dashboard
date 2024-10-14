@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar/NavBar";
 import Menu from "../components/Menu/Menu";
 import Outlet from "../components/Outlet/Outlet";
 import Footer from "../components/Footer/Footer"
+import React from "react";
 
 export default function Home() {
  

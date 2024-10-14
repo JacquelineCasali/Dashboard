@@ -23,7 +23,7 @@ export default function Cadastro(props: Props) {
     <>
 
       {/* <h1 >Adicionar novo Usuário</h1> */}
-      <h1 className='h1cadastro'>Adicionar novo Usuário {props.slug}</h1>
+      <h1 className='h1cadastro'>Add New {props.slug}</h1>
             
         <form onSubmit={handleSubmit}>
           {/* filtrar para nao pegar o id e a img */}

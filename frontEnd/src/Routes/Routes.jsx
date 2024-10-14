@@ -6,8 +6,7 @@ import Error from "../page/Error/Error";
 import Users from "../page/Users/Users";
 import Products from "../page/Products";
 import Loginelogaut from "../page/Login";
-import NavBar from "../components/NavBar/NavBar";
-import Menu from "../components/Menu/Menu";
+
 
 const AppRoutes = () => {
   return (
@@ -19,7 +18,7 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route exact path="/login" element={<Loginelogaut />} />
       <Route path="/users" element={<Users />} />
-      <Route path="/produtos" element={<Products />} />
+      <Route path="/products" element={<Products/>} />
     
     </Routes>
 

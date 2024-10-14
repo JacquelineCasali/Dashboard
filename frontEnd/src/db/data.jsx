@@ -190,7 +190,7 @@ export const topDealUsers = [
 
 export const chartBoxUser = {
   color: "#8884d8",
-  icon: "../../../public/userIcon.svg",
+  icon: "/userIcon.svg",
   title: "Total Users",
   number: "11.238",
   dataKey: "users",
@@ -208,7 +208,7 @@ export const chartBoxUser = {
 
 export const chartBoxProduct = {
   color: "skyblue",
-  icon: "/public/productIcon.svg",
+  icon: "/productIcon.svg",
   title: "Total Products",
   number: "238",
   dataKey: "products",
@@ -225,7 +225,7 @@ export const chartBoxProduct = {
 };
 export const chartBoxRevenue = {
   color: "teal",
-  icon: "/public/revenueIcon.svg",
+  icon: "/revenueIcon.svg",
   title: "Total Revenue",
   number: "$56.432",
   dataKey: "revenue",
@@ -242,7 +242,7 @@ export const chartBoxRevenue = {
 };
 export const chartBoxConversion = {
   color: "gold",
-  icon: "/public/conversionIcon.svg",
+  icon: "/conversionIcon.svg",
   title: "Total Ratio",
   number: "2.6",
   dataKey: "ratio",
@@ -329,15 +329,6 @@ export const barChartBoxVisit = {
     },
   ],
 };
-
-// cadastro
-export function cadastro(body){
-  // verificando se existe
-  const user=userRows.find(({email})=>email===body.email)
-  if(user) throw new Error("Usuario Já Cadastrado")
-    userRows.push(body)
-    return body
-}
 
 
 export const userRows = [

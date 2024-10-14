@@ -4,8 +4,7 @@ import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { userRows } from "../../db/data";
+
 type Props={
   columns:GridColDef[]
   rows:object[]
