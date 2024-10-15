@@ -10,6 +10,7 @@
   font-weight: 200;
   text-transform: uppercase;
 
+
 }
 .listItem{
   display: flex;
@@ -21,6 +22,31 @@
 .listItem:hover{
   background-color: var(--softbg);
 }
-.listItemTitle{
+
+
+@media screen and (max-width: 480px) {
 
 }
+
+
+@media screen and (max-width:769px) {
+
+
+}
+@media screen and (max-width:1024px){
+  
+  .listItemTitle{
+    display: none;
+  }
+
+}
+
+    @media screen and (max-width: 1200px) {
+      }
+
+      @media screen and (max-width: 1400) {
+      }
+
+
+
+ 

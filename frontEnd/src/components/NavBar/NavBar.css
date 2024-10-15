@@ -41,6 +41,10 @@ img{
     object-fit: cover;
     
 }
-
+@media screen and (max-width: 480px) {
+.icons{
+    display: none;
+}
+}
 
 

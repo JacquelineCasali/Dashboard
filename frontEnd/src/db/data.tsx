@@ -58,13 +58,13 @@ export const menu = [
       {
         id: 3,
         title: "Orders",
-        url: "/orders",
+        url: "/products",
         icon: <LuClipboardList size={30} />,
       },
       {
         id: 4,
         title: "Posts",
-        url: "/posts",
+        url: "/users",
         icon: <IoNewspaperOutline size={30} />,
       },
     ],

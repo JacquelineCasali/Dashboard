@@ -34,15 +34,7 @@ export default function Single(props: Props) {
             <button className="buttonadicionar">Update</button>
           </div>
           <div className="detalis">
-            {/* {Object.entries(props.info).map((item)=>(
-
-            <div className='itemdetalis' key={item[0]}>
-            <span className='itemTitle'>{item[0]}</span>
-            <span className='itemValue'>{item[1]}</span>
-          
-            </div>
-             ))} */}
-            {Object.entries(props.info).map((item) => (
+                   {Object.entries(props.info).map((item) => (
               <div className="itemdetalis" key={item[0]}>
                 <span className="itemTitle">{item[0]}</span>
                 <span className="itemValue">{item[1]}</span>
