@@ -6,13 +6,11 @@ import { GridColDef } from "@mui/x-data-grid";
 import React, { useState } from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Menu from "../components/Menu/Menu";
-import Modal from "../components/Modal/Modal";
 import Cadastro from "../components/Cadastro/Cadastro";
 import Table from "../components/Table/Table";
 import Footer from "../components/Footer/Footer";
-import { products, userRows } from "../db/data";
+import { products } from "../db/data";
 
-// import Cadastro from "../../components/Cadastro/Cadastro";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 50 },
@@ -95,9 +93,7 @@ const Products = () => {
               <IoIosAdd size={25} />
               Novo Produto
             </button>
-            <Modal isOpen={openModal} setOpenModal={setOpenModal}>
-              <Cadastro slug="product" columns={columns} setOpenModal={setOpenModal}/>
-            </Modal>
+            {openModal && <Cadastro slug="users" columns={columns} setOpenModal={setOpenModal}/>}
 
             <Table slug="products" columns={columns} rows={products} />
 

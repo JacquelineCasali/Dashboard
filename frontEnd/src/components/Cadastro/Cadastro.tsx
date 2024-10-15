@@ -19,9 +19,16 @@ export default function Cadastro(props: Props) {
      
    }
  
-  return (
-    <>
 
+
+  return (
+   
+    <div className='background'>
+      <div className='modals' >  
+   
+      <div className='x' onClick={() => props.setOpenModal(false)}>X</div>
+    
+      <div className='text-modal'>
       {/* <h1 >Adicionar novo Usuário</h1> */}
       <h1 className='h1cadastro'>Add New {props.slug}</h1>
             
@@ -39,7 +46,8 @@ export default function Cadastro(props: Props) {
              ))}
               <button className='  button'>Cadastrar</button>
         </form>
-   
-    </>
+        </div>
+        </div>
+        </div>
   )
 }

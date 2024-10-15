@@ -1,6 +1,7 @@
 import "./Menu.css";
 import { Link } from "react-router-dom";
 import {menu} from '../../db/data'
+import React from "react";
 export default function Menu() {
   return (
     <div className="menu">

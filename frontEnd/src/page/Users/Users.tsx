@@ -8,9 +8,9 @@ import { GridColDef } from "@mui/x-data-grid";
 import React, { useState } from "react";
 import { userRows } from "../../db/data";
 import Table from "../../components/Table/Table";
-import Modal from "../../components/Modal/Modal";
+
 import Cadastro from "../../components/Cadastro/Cadastro";
-// import Cadastro from "../../components/Cadastro/Cadastro";
+
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 50 },
@@ -93,11 +93,9 @@ const Users = () => {
               <IoIosAdd size={25} />
               Novo Usuário
             </button>
-            <Modal isOpen={openModal} setOpenModal={setOpenModal}>
-              <Cadastro slug="users" columns={columns} setOpenModal={setOpenModal}/>
-            </Modal>
-
-            <Table slug="users" columns={columns} rows={userRows} />
+           {openModal && <Cadastro slug="users" columns={columns} setOpenModal={setOpenModal}/>}
+           
+                     <Table slug="users" columns={columns} rows={userRows} />
 
        
           </div>
