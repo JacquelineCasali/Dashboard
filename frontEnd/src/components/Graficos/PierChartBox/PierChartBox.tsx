@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "./PierChartBox.css"
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts'
 export default function PierChartBox() {

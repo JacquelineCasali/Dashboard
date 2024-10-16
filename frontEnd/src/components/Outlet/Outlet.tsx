@@ -1,11 +1,11 @@
-import React from 'react'
+
 import "./Outler.css"
 import TopBox from '../TopBox/TopBox'
 import ChartBox from '../Graficos/ChartBox/ChartBox'
 import { barChartBoxRevenue, barChartBoxVisit, chartBoxConversion, chartBoxProduct, chartBoxRevenue, chartBoxUser } from '../../db/data'
 import BarChartBox from '../Graficos/BarChartBox/BarChartBox'
-import PierChartBox from '../Graficos/PierChartBox/PierChartBox'
-import BigChartBox from '../Graficos/BigChartBox/BigChartBox'
+import PierChartBox from "../Graficos/PierChartBox/PierChartBox"
+import BigChartBox from "../Graficos/BigChartBox/BigChartBox"
 
 export default function Outlet() {
   return (

@@ -1,5 +1,5 @@
 import { Helmet, HelmetProvider } from "react-helmet-async"; // titulo da pagina
-import React from "react";
+
 import Single from "../components/Single/Single";
 import NavBar from "../components/NavBar/NavBar";
 import Menu from "../components/Menu/Menu";

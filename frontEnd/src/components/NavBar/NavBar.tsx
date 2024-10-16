@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./NavBar.css";
 
 import { IoIosNotificationsOutline, IoIosSearch } from "react-icons/io";

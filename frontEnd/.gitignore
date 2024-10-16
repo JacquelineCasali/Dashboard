@@ -22,12 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-
-.vercel
-Rotas
-MapaPage.jsx
-
-# instalando o mui
-# npm install @mui/x-data-grid
-# npm install @mui/material @emotion/react @emotion/styled

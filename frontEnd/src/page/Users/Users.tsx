@@ -1,15 +1,16 @@
 import { Helmet, HelmetProvider } from "react-helmet-async"; // titulo da pagina
 import NavBar from "../../components/NavBar/NavBar";
 import Menu from "../../components/Menu/Menu";
-import Footer from "../../components/Footer/Footer";
+
 import "./Users.css";
 import { IoIosAdd } from "react-icons/io";
 import { GridColDef } from "@mui/x-data-grid";
-import React, { useState } from "react";
+import { useState } from "react";
 import { userRows } from "../../db/data";
 import Table from "../../components/Table/Table";
 
 import Cadastro from "../../components/Cadastro/Cadastro";
+import Footer from "../../components/Footer/Footer";
 
 
 const columns: GridColDef[] = [

@@ -1,4 +1,3 @@
-
 :root {
   --mainbg:#2a3447;
   --softbg:#384256;
@@ -61,3 +60,11 @@
   padding: 5px 20px;
   width: 100%;
 }
+
+/* @media screen and (max-width: 768px) {
+.main{
+
+    background-color:var(--mainbg);
+   
+}
+} */

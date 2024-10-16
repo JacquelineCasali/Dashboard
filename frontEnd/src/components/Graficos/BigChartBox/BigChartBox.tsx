@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "./BigChartBox.css"
 import { Area, AreaChart,  ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 export default function BigChartBox() {

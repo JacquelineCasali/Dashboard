@@ -19,3 +19,39 @@ grid-auto-rows: minmax(180px,auto);
     grid-column: span 2;
     grid-row: span 2;
 }
+@media screen and (max-width: 1200px) {
+    .home{
+       
+        grid-template-columns: repeat(3,1fr);
+        /* altura minima  */
+      
+        }
+    }
+@media screen and (max-width: 1024px) {
+    .home{
+       
+        grid-template-columns: repeat(2,1fr);
+        /* altura minima  */
+      
+        }
+}
+
+@media screen and (max-width: 768px) {
+    .home{
+       
+        grid-template-columns: repeat(1,1fr);
+        /* altura minima  */
+      
+        }
+        .box7{
+         display: none;
+        } 
+}
+
+@media screen and (max-width: 480px) {
+    .home{
+        grid-auto-rows: minmax(120px, auto);
+        /* altura minima  */
+      
+        }
+}
