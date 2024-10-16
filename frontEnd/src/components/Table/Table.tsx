@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Table.css";
 import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 import { RiDeleteBinLine } from "react-icons/ri";

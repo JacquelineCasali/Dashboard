@@ -18,7 +18,7 @@ import {
 } from "react-icons/io5";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { MdOutlineBackup } from "react-icons/md";
-import React from "react";
+
 export const menu = [
   {
     id: 1,

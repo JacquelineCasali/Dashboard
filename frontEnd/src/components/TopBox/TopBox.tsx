@@ -1,4 +1,3 @@
-import React from 'react'
 import "./TopBox.css"
 import { topDealUsers } from '../../db/data'
 export default function TopBox() {
